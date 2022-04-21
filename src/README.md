@@ -25,6 +25,12 @@
 	- `dotnet ef migrations add CategoryAndProduct`
 	- `dotnet ef database update`
 
+# Seção 13 - Validações
 
+## Aula 70 - Flunt para validações
+- Instalar Flunt (Baltieri) através do Gerenciador de pacotes Nuget
+- Ativaremos as notificações através dos domínios, nas classes
+- As notificações precisam ser tratadas de preferencia no construtor da classe e com 'contract'
+- Ignore em Notification na classe ApplicationDbContext
 
 
