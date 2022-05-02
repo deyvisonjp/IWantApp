@@ -1,7 +1,6 @@
 ﻿# Curso NET 6 Web Api - Udemy 
-### Stephany Henrique de Almeida — Instrutor
-### Repositório do Projeto Professor: GitGub
+### Instrutor: Stephany Henrique de Almeida
+### Repositório do Projeto Professor: [GitGub](https://github.com/StephanyBatista/IWantApp)
 
-## Projeto Exemplo de Vendas - Api Web Rest Net Core 6
-
-
+## IWantApp
+_Repository to teach students about .NET 6 and how to build a web app in the real world._
