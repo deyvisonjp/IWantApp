@@ -1,6 +1,6 @@
 ﻿namespace IWantApp.Endpoints.Categories;
 
-public class EmployeeResponse
+public class CategoryResponse
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

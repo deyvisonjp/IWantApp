@@ -40,3 +40,8 @@
 - Adicionar o identity como serviço em Program
 - Após adicionar o serviço é necessário add também a migration de identificação
 - Claims: Usuários/Funções distintas
+
+## Aula 86 - Dapper
+- O [Dapper](https://www.brunobrito.net.br/dapper-em-detalhes/) é um micro ORM para .NET. Um mecanismo, simples, que auxilia no mapeamento de objetos a partir de consultas SQL. É uma library de alto desempenho para acesso a dados. Criado pela equipe do StackOverflow. Open Source. A palavra chave do Dapper é performance
+- Instalar lib Dapper através do Nuget
+- Ex. em EndPoint/EmployeeGetAll

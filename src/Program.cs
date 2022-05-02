@@ -15,6 +15,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     options.Password.RequiredLength = 3;
 }).AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.AddScoped<QueryAllUsersWithName>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
