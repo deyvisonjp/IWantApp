@@ -33,4 +33,10 @@
 - As notificações precisam ser tratadas de preferencia no construtor da classe e com 'contract'
 - Ignore em Notification na classe ApplicationDbContext
 
-
+# Seção 14 - Identity
+- Pacote instalado: 
+	- Microsoft.AspNetCore.Identity.EntityFrameworkCore
+- Adicionar a 'dependência no ApplicationDbContext' e base.OnModelCreating(builder);
+- Adicionar o identity como serviço em Program
+- Após adicionar o serviço é necessário add também a migration de identificação
+- Claims: Usuários/Funções distintas
