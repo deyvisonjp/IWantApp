@@ -45,3 +45,13 @@
 - O [Dapper](https://www.brunobrito.net.br/dapper-em-detalhes/) é um micro ORM para .NET. Um mecanismo, simples, que auxilia no mapeamento de objetos a partir de consultas SQL. É uma library de alto desempenho para acesso a dados. Criado pela equipe do StackOverflow. Open Source. A palavra chave do Dapper é performance
 - Instalar lib Dapper através do Nuget
 - Ex. em EndPoint/EmployeeGetAll
+
+# Seção 15 - JWT e Autenticação
+[https://balta.io/blog/aspnet-core-autenticacao-autorizacao](https://balta.io/blog/aspnet-core-autenticacao-autorizacao)
+- JWT: É a sigla para Json Web Token e pronuncia-se JOT. O JWT nada mais é que o armazenamento das informações do token no formato JSON.
+- Ferramentas: Auth0, okta, keyloak, Identity (Vamos usar Identity)
+
+## Gerando o token
+- Instalar a depêndencia: Microsoft.AspNetCore.Authentication.JwtBearer
+- Criação de um endpoint para log
+
