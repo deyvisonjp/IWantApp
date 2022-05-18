@@ -11,12 +11,7 @@ public class EmployeePost
 
     public static IResult Action(EmployeeRequest employeeRequest, UserManager<IdentityUser> userManager)
     {
-        var user = new IdentityUser
-        {
-            UserName = employeeRequest.Email,
-            Email = employeeRequest.Email
-        };
-
+        var user = new IdentityUser { UserName = employeeRequest.Email, Email = employeeRequest.Email };
         var result = userManager.CreateAsync(user, employeeRequest.Password).Result;
 
         if (!result.Succeeded)
@@ -28,10 +23,11 @@ public class EmployeePost
             new Claim("Name", employeeRequest.Name)
         };
 
-        var claimResult = userManager.AddClaimsAsync(user, userClaims).Result;
-        
+        var claimResult =
+            userManager.AddClaimsAsync(user, userClaims).Result;
+
         if (!claimResult.Succeeded)
-            return Results.BadRequest(result.Errors.First());
+            return Results.BadRequest(claimResult.Errors.First());
 
         return Results.Created($"/employees/{user.Id}", user.Id);
     }

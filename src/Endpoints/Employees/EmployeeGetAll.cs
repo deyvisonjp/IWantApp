@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using IWantApp.Infra.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
 
 namespace IWantApp.Endpoints.Employees;
@@ -11,6 +12,7 @@ public class EmployeeGetAll
     public static Delegate Handle => Action;
 
     //Usando Dapper Por MAIS Performance
+    [Authorize(Policy = "EmployeePolicy")]
     public static IResult Action(int? page, int? rows, QueryAllUsersWithName query)
     {
 

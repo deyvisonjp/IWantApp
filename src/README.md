@@ -54,4 +54,11 @@
 ## Gerando o token
 - Instalar a depêndencia: Microsoft.AspNetCore.Authentication.JwtBearer
 - Criação de um endpoint para log
+- Configurando autenticação e autorização
+	1. Configurar appsettings
+	2. Add builder.Services.AddAuthorization e builder.Services.AddAuthentication
+- Proteções no endpoint
+	1. [AllowAnonymous] - Sem bloqueio
+	2. [Authorize] - Somente usuários logados podem executar este endpoint
+
 
