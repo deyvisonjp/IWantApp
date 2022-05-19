@@ -61,4 +61,28 @@
 	1. [AllowAnonymous] - Sem bloqueio
 	2. [Authorize] - Somente usuários logados podem executar este endpoint
 
+## Async vs Sync
+- **Processos Sincronos:** 
+	- O processador trabalha de forma _concorrente_, processa um processo por vez.
+- **Processos Assíncronos:** 
+	- Permite a execução do programa na thread principal enquanto uma tarefa de longa duração é executada na sua própria thread separadamente da thread principa
+	- Não cria processos bloqueantes, a forma _paralela_ (mais de um core no CPU)
+
+## Melhorando a aplicação 
+1. Implict Using (Aula 104): Nova melhoria > .NET 6
+	- Editar arquivo do projeto
+	```
+	<ImplicitUsings>enable</ImplicitUsings>
+	<ItemGroup>
+		<Using Include="Flunt.Notifications"/>
+		... Colocar todos desejados
+	</ItemGroup>
+	```
+	- Ver exemplo da ApplicationDbContext
+2. Records
+	- Records são parecidas com Classes porém, Records são usados quando não vamos ter alteração no objeto/classe e essas classes mais simples
+	- Somente para inicialização
+	- Ex. EmplyeeRequest/CategoryRequest
+3. Filtros de exceções (Filter Error)
+    - Configurar em Program.cs, `app.UseExceptionHandler();`
 
