@@ -8,12 +8,12 @@
 
 	<ItemGroup>
 		<Compile Remove="Endpoints\Employees\QueryAllUsersWithClaim.cs" />
-		<Using Include="Flunt.Notifications"/>
-		<Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"/>
-		<Using Include="Microsoft.AspNetCore.Identity"/>
-		<Using Include="Microsoft.EntityFrameworkCore"/>
+		<Using Include="Flunt.Notifications" />
+		<Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+		<Using Include="Microsoft.AspNetCore.Identity" />
+		<Using Include="Microsoft.EntityFrameworkCore" />
 
-		<Using Include="IWantApp.Domain.Products"/>
+		<Using Include="IWantApp.Domain.Products" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -27,6 +27,8 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
+		<PackageReference Include="Serilog.AspnetCore" Version="5.0.0" />
+		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.7.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
 	</ItemGroup>
 

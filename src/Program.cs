@@ -8,9 +8,27 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Sinks.MSSqlServer;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//BancoLog
+#pragma warning disable CS0618 // O tipo ou membro é obsoleto
+builder.WebHost.UseSerilog((context, configuration) =>
+{
+    configuration
+    .WriteTo.Console()
+    .WriteTo.MSSqlServer(
+        context.Configuration["ConnectionString:IWantDb"],
+            sinkOptions: new MSSqlServerSinkOptions()
+            {
+                AutoCreateSqlTable = true,
+                TableName = "LogIWantAPI"
+            });
+});
+#pragma warning restore CS0618 // O tipo ou membro é obsoleto
 
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:IWantDb"]);
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>

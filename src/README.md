@@ -86,3 +86,12 @@
 3. Filtros de exceções (Filter Error)
     - Configurar em Program.cs, `app.UseExceptionHandler();`
 
+## **LOGs**
+LogLevel configurado em appsettings.json
+Exemplo na classe TokenPost
+- Salvando logs em banco de dados
+Usaremos duas bibliotecas para esta ação:
+    1. `dotnet add package Serilog.AspnetCore`
+    2. `dotnet add package Serilog.Sinks.MSSqlServer`
+- Configurado em Program: `builder.WebHost.UseSerilog((context, configuration) ...`
+ 
