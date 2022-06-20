@@ -96,4 +96,7 @@ Usaremos duas bibliotecas para esta ação:
 - Configurado em Program: `builder.WebHost.UseSerilog((context, configuration) ...`
 
 ## Seção 19 - Gerenciamento de produto
- 
+## Seção 20 - Vitrine de produtos
+- Expiração de token, tempo diferente para produção e desenvolvimento
+    - Ver exemplo em: TokenPost em Expires
+- Vitrine funciona no Controller "ProductGetShowcase"
